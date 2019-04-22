@@ -1,0 +1,23 @@
+
+  <html>
+    <head>
+      <title> Gossip Project </title>
+      </head>
+        <body>
+
+    <h1>Mon super site de gossip THP</h1>
+
+        <p>Voici la page du potin n° : <%= params["id"] %></p>
+
+        <% gossip.each do |n| %>
+
+            Auteur : <%= n.author %>
+            Potin : <%= n.content %>
+             <a href="/">--> Revenir à la page des potins</a>
+
+
+        <% end %>
+
+
+        </body>
+</html>

@@ -3,7 +3,7 @@ require 'csv'
 
 class ApplicationController < Sinatra::Base
   get '/' do
-    erb :index
+    erb :index, locals: {gossips: Gossip.all}
   end
 
   get '/gossips/new/' do
@@ -11,7 +11,12 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/gossips/new/' do
-    Gossip.new.save
+    Gossip.new(params["gossip_author"], params["gossip_content"]).save
+    redirect '/'
+  end
+
+  get '/gossips/:id' do |id|
+    erb :gossip, locals: {gossip: Gossip.find(id.to_i)}
   end
 
 end
