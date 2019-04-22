@@ -5,3 +5,11 @@ Ceci est le repository du jour 15 sur le projet "The Gossip Project" avec Sinatr
 Je suis allé jusqu'à l'exercice 2.6.4, mais les pages pour show chaque page individuellement en fonction de leur numéro ne fonctionnent pas. Le code a été écrit néanmoins, je n'ai pas réussi à comprendre l'erreur.
 
 Kise SHARY
+
+Pour tester l'appli:
+
+-git clone
+
+-bundle install dans le dossier concerné
+
+-shotgun -p 4567
